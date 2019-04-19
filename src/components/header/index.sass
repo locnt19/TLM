@@ -1,0 +1,304 @@
+header
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 1
+	width: 100%
+	box-shadow: 0 0 5px 0 #d1d1d1
+	/* ========== top-header style ========== */
+	.col-lg-10,
+	.col-xl-10
+		padding-right: 0
+	.top-header
+		.container
+			position: relative
+			&:after
+				content: ''
+				width: 100%
+				height: 35px
+				display: block
+				background: #074C97
+				position: absolute
+				top: 0
+				left: 100%
+				@media (max-width: 1410px)
+					content: none
+	.top-header-content
+		position: relative
+		background: #074C97
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		float: right
+		color: #fff
+		width: calc(100%-65px)
+		a, span
+			color: #fff
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 2px
+			background: #074C97
+			position: absolute
+			top: 0
+			right: 100%
+		&:after
+			content: ''
+			background-image: url('../img/header.png')
+			width: 65px
+			height: 35px
+			position: absolute
+			top: 0
+			right: 100%
+		@media (max-width: 1410px)
+			&:before, &:after
+				content: none
+	.search-box
+		background: rgba(255,255,255, .1)
+		padding-right: 10px
+		border-left: 1px solid rgba(255,255,255, .2)
+		border-right: 1px solid rgba(255,255,255, .2)
+		input
+			padding: 6.5px 10px
+			color: #fff
+			@media (min-width: 1410px)
+				font-size: 15px
+			&::placeholder
+				font-style: italic
+				color: rgba(255,255,255, .5)
+		input, button
+			background: transparent
+			border: none
+			outline: none
+	.phone
+		font-weight: 700
+		padding: 0 20px
+		a
+			color: #fff
+		i
+			color: #17a554
+			margin-right: 10px
+	.language
+		display: inline-block
+		position: relative
+		&:before,
+		&:after
+			content: ''
+			display: block
+			width: 1px
+			height: calc(100% + 5px)
+			background: rgba(255,255,255, .2)
+			position: absolute
+			top: -3px
+		&:before
+			left: 0
+		&:after
+			right: 0
+		.current
+			padding-right: 10px
+			.item
+				&:after
+					color: #17a554
+					+mtrl('\f35d')
+					position: absolute
+					right: 0
+		.language-content
+			position: absolute
+			background: #074C97
+			width: 100%
+			opacity: 0
+			z-index: 11
+			visibility: hidden
+			transition: all .2s ease-in-out
+			&.active
+				opacity: 1
+				visibility: visible
+		.item
+			display: flex
+			position: relative
+			align-items: center
+			text-transform: uppercase
+			padding: 2.5px 20px
+			padding-left: 10px
+		.box-img
+			display: inline-block
+			width: 25px
+			height: 25px
+			border-radius: 100%
+			overflow: hidden
+			margin-right: 10px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	/* ========== main-header style ========== */
+	.main-header
+		background: #fff
+	.main-header-logo
+		position: relative
+		margin-top: -20px
+		@media (max-width: 1410px)
+			width: 100px
+			margin-top: 0
+			margin-right: 10px
+	.main-nav
+		display: flex
+		justify-content: flex-end
+		a
+			font-weight: 600
+			text-transform: uppercase
+			color: #333
+		>li
+			position: relative
+			padding: 20.5px 25px
+			&:last-child
+				padding-right: 0
+			&:hover
+				.sub-nav
+					opacity: 1
+					visibility: visible
+					@media (max-width: 1410px)
+						position: static
+		.sub-nav
+			position: absolute
+			top: 100%
+			background: #fff
+			width: 220px
+			left: 0
+			box-shadow: 0 5px 5px #f1f1f1
+			opacity: 0
+			visibility: hidden
+			transition: all .5s ease-in-out
+			@media (min-width: 1410px)
+				background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
+				a
+					color: #fff
+			li
+				display: block
+				padding: 7.5px 20px
+				line-height: 1
+				border-bottom: 1px solid #f1f1f1
+	/* ========== mobile style ========== */
+	.mobile
+		@media (max-width: 1410px)
+			display: flex
+			padding: 15px 0
+			align-items: center
+			justify-content: space-between
+		.language
+			border: none
+			a
+				display: none
+			&:before, &:after
+				content: none
+			.current
+				padding: 0
+			.item
+				padding: 0 10px 0 0
+			.language-content
+				background: none
+				.item
+					margin-top: 5px
+					padding: 0
+	.mobile-hamburger
+		width: 30px
+		height: 22.5px
+		position: relative
+		transform: rotate(0deg)
+		transition: .5s ease-in-out
+		cursor: pointer
+		@media (min-width: 1410px)
+			display: none
+		span
+			background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
+			display: block
+			position: absolute
+			height: 3px
+			width: 100%
+			border-radius: 9px
+			opacity: 1
+			left: 0
+			transform: rotate(0deg)
+			transition: all .3s ease-in-out
+			&:nth-child(1) 
+				top: 0px
+				transform-origin: left center
+			&:nth-child(2) 
+				top: 9px
+				transform-origin: left center
+			&:nth-child(3) 
+				top: 18px
+				transform-origin: left center
+		&.active
+			span
+				&:nth-child(1)
+					transform: rotate(45deg)
+					top: 0px
+					left: 8px
+				&:nth-child(2) 
+					opacity: 0
+					width: 0
+				&:nth-child(3) 
+					transform: rotate(-45deg)
+					top: 21.5px
+					left: 8px
+	.mobile-nav-wrapper
+		position: absolute
+		background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
+		width: 70%
+		z-index: 99
+		right: -100%
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5)
+		transition: all 1s ease-in-out
+		@media (max-width: 576px)
+			width: 100%
+		&.active
+			right: 0
+		.phone
+			padding: 20.5px 25px
+			a, i
+				color: #fff
+		.main-nav
+			display: block
+			a
+				color: #fff
+			li
+				padding: 20.5px 25px
+		.sub-nav
+			position: absolute
+			width: 100%
+			box-shadow: none
+			background: none
+			visibility: hidden
+			opacity: 0
+			transition: none
+		.search-box
+			border: none
+			padding: 0
+			margin-bottom: 30px
+			display: flex
+			input
+				width: 100%
+			button
+				flex: 0 0 35px
+				color: #fff
+	@media (max-width: 1410px)
+		.mobile-line
+			width: 0
+			height: 2px
+			transition: all 1.2s ease-in-out
+			background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
+			&.active
+				width: 100%
+		.mobile-backdrop
+			width: 100%
+			height: 100vh
+			z-index: 9
+			background: rgba(0,0,0,.5)
+			position: absolute
+			top: 78px
+			right: -100%
+			transition: all .8s ease-in-out
+			&.active
+				right: 0
