@@ -61,6 +61,36 @@ $(document).ready(function () {
 			})
 		},
 	}
+
+	const Home = {
+		banner: function () {
+			let bannerHome = new Swiper('.home-banner .swiper-container', {
+				slidesPerView: 1,
+				loop: true,
+				autoplay: {
+					delay: 3000
+				},
+				speed: 3000,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+		},
+		gallerySlide: function () {
+			let gallerySlide = new Swiper('.home-gallery .swiper-container', {
+				slidesPerView: 1,
+				loop: true,
+				autoplay: {
+					delay: 2000
+			},
+				speed: 2500,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+			});
+		}
+	}
+	
 	Header.toggleMainMenu();
 	Header.toggleLanguage();
 	Header.moveLanguageOnMobile();
@@ -68,4 +98,11 @@ $(document).ready(function () {
 	Header.moveNavigationOnMobile();
 	Header.moveSearchBoxOnMobile();
 	Header.fixedPositon();
+	Home.banner();
+	Home.gallerySlide();
+
+	$('.fixed-phone .phone-icon').click(function () {
+		$('.fixed-phone .phone-number').toggleClass('show')
+	})
+	
 });

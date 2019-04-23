@@ -1,0 +1,101 @@
+.home-banner
+	position: relative
+	figure
+		position: relative
+		.box-img
+			overflow: hidden
+			height: 850px
+			@media (max-width: 1410px)
+				height: 770px
+			@media (max-width: 1200px)
+				height: 670px
+			@media (max-width: 992px)
+				height: 570px
+			@media (max-width: 768px)
+				height: 470px
+			@media (max-width: 576px)
+				height: 370px
+			@media (max-width: 320px)
+				height: 270px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 200px
+			background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.4), rgba(0,0,0,.5), rgba(0,0,0,.6), rgba(0,0,0,.7), rgba(0,0,0,.8), rgba(0,0,0,.9))
+	figcaption
+		z-index: 1
+		position: absolute
+		padding: 0 50px 100px
+		bottom: 0
+		color: #fff
+		font-size: 40px
+		text-transform: uppercase
+		width: 100%
+		text-align: center
+		@media (max-width: 1410px)
+			font-size: 36px
+			padding: 0 40px 90px
+		@media (max-width: 1200px)
+			font-size: 32px
+			padding: 0 35px 80px
+		@media (max-width: 992px)
+			font-size: 28px
+			padding: 0 30px 70px
+		@media (max-width: 768px)
+			font-size: 24px
+			padding: 0 25px 60px
+		@media (max-width: 576px)
+			font-size: 20px
+			padding: 0 15px 50px
+		@media (max-width: 320px)
+			font-size: 16px
+			padding: 0 10px 40px
+	.swiper-pagination
+		position: absolute
+		bottom: 50px
+		left: 50%
+		transform: translateX(-50%)
+		@media (max-width: 1410px)
+			bottom: 35px
+		@media (max-width: 1200px)
+			bottom: 30px
+		@media (max-width: 992px)
+			bottom: 25px
+		@media (max-width: 768px)
+			bottom: 20px
+		@media (max-width: 576px)
+			bottom: 15px
+		@media (max-width: 320px)
+			bottom: 10px
+		span
+			width: 10px
+			height: 10px
+			background: #fff
+			border-radius: 0
+			transform: rotate(45deg)
+			margin: 10px
+			opacity: 1
+			&.swiper-pagination-bullet-active
+				background: #00A650
+			@media (max-width: 1410px)
+				width: 9px
+				height: 9px
+				margin: 9px
+			@media (max-width: 992px)
+				width: 8px
+				height: 8px
+				margin: 8px
+			@media (max-width: 768px)
+				width: 7px
+				height: 7px
+				margin: 7px
+			@media (max-width: 576px)
+				width: 6px
+				height: 6px
+				margin: 6px

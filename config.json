@@ -7,6 +7,7 @@
 	"globalJs": [
 		"bower_components/swiper/dist/js/swiper.min.js",
 		"bower_components/jquery/dist/jquery.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.min.js",
 		"src/plugins/lazysizes.min.js",
 		"src/plugins/mapping.js",
 		"src/plugins/mapping-listener.js"
@@ -14,6 +15,7 @@
 	"globalCss": [
 		"src/plugins/grid.css",
 		"src/plugins/font.css",
-		"bower_components/swiper/dist/css/swiper.min.css"
+		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css"
 	]
 }

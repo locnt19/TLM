@@ -1,0 +1,102 @@
+.fixed-phone
+	position: fixed
+	right: 50px
+	bottom: 30%
+	display: flex
+	z-index: 99
+	align-items: center
+	@media (max-width: 992px)
+		transform: scale(0.8)
+		bottom: 10%
+		right: 10px
+	@media (max-width: 576px)
+		transform: scale(0.6)
+		bottom: 4%
+		right: -20px
+	.phone-icon
+		border-radius: 50%
+		width: 70px
+		height: 70px
+		background: #eb0000
+		display: flex
+		align-items: center
+		justify-content: center
+		cursor: pointer
+		position: relative
+		&:before
+			color: #fff
+			font-size: 40px
+			content: '\f3f2'
+			display: inline-block
+			line-height: 1
+			text-rendering: auto
+			font-family: 'Material Design Icons'
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			animation: ringing-animation 1s infinite
+		&:after
+			position: absolute
+			content: ''
+			border-radius: 50%
+			z-index: -1
+			background: rgba(255,255,255,.4)
+			width: 120px
+			height: 120px
+			animation: circle-animation 3s infinite
+	.phone-number
+		opacity: 0
+		background: #eb0000
+		padding: 5px 14px
+		margin-left: 0
+		margin-right: 21px
+		border-radius: 5px
+		position: relative
+		transition: 0.3s all
+		text-decoration: none
+		&:before
+			position: absolute
+			content: ''
+			right: -3.5px
+			left: auto
+			top: 50%
+			transform:  translateY(-50%) rotate(45deg)
+			width: 7px
+			height: 7px
+			background: #eb0000
+		span
+			text-transform:  uppercase
+			font-weight: 700
+			color: #fff
+		&.show
+			opacity: 1
+			transition: 0.3s all
+
+@keyframes circle-animation
+	0% 
+		transform: rotate(0) scale(.4) skew(1deg)
+		opacity:.2
+	30% 
+		transform: rotate(0) scale(.6) skew(1deg)
+		opacity:.6
+	60% 
+		transform: rotate(0) scale(0.8) skew(1deg)
+		opacity:.3
+	100% 
+		transform: rotate(0) scale(1) skew(1deg)
+		opacity:.0
+
+@keyframes ringing-animation
+	0%
+		transform: rotate(0) scale(1) skew(1deg)
+	10%
+		transform: rotate(-25deg) scale(1) skew(1deg)
+	20%
+		transform: rotate(25deg) scale(1) skew(1deg)
+	30%
+		transform: rotate(-25deg) scale(1) skew(1deg)
+	40%
+		transform: rotate(25deg) scale(1) skew(1deg)
+	50%
+		transform: rotate(0) scale(1) skew(1deg)
+	100%
+		transform: rotate(0) scale(1) skew(1deg)

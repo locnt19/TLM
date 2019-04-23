@@ -2,14 +2,15 @@ header
 	position: fixed
 	top: 0
 	left: 0
-	z-index: 1
+	z-index: 99
 	width: 100%
-	box-shadow: 0 0 5px 0 #d1d1d1
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.3)
 	/* ========== top-header style ========== */
 	.col-lg-10,
 	.col-xl-10
 		padding-right: 0
 	.top-header
+		background: #fff
 		.container
 			position: relative
 			&:after
@@ -166,7 +167,7 @@ header
 			background: #fff
 			width: 220px
 			left: 0
-			box-shadow: 0 5px 5px #f1f1f1
+			box-shadow: 0 2px 5px rgba(0,0,0,.5)
 			opacity: 0
 			visibility: hidden
 			transition: all .5s ease-in-out
@@ -178,7 +179,8 @@ header
 				display: block
 				padding: 7.5px 20px
 				line-height: 1
-				border-bottom: 1px solid #f1f1f1
+				&:not(:last-child)
+					border-bottom: 1px solid #f1f1f1
 	/* ========== mobile style ========== */
 	.mobile
 		@media (max-width: 1410px)
@@ -246,15 +248,17 @@ header
 	.mobile-nav-wrapper
 		position: absolute
 		background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
-		width: 70%
+		width: 40%
 		z-index: 99
 		right: -100%
-		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5)
 		transition: all 1s ease-in-out
+		@media (max-width: 768px)
+			width: 70%
 		@media (max-width: 576px)
 			width: 100%
 		&.active
 			right: 0
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5)
 		.phone
 			padding: 20.5px 25px
 			a, i
