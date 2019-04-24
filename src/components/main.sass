@@ -62,6 +62,28 @@ hr
 	@media (max-width: 576px)
 		font-size: 20px
 
+.modulepager
+	display: flex
+	justify-content: center
+	.pagination
+		margin-top: 30px
+		display: flex
+		li
+			width: 30px
+			height: 30px
+			display: flex
+			align-items: center
+			justify-content: center
+			background: #f2f2f2
+			&:not(:last-child)
+				margin-right: 15px
+			&.active
+				background: #00A650
+		span
+			color: #fff
+		a
+			color: #999
+
 @import "home/home-banner/index.sass"
 
 @import "home/home-news/index.sass"
@@ -97,3 +119,5 @@ hr
 @import "duan-ct/tienich/index.sass"
 
 @import "duan-ct/lienhe/index.sass"
+
+@import "duan-ds/index.sass"

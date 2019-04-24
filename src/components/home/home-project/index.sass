@@ -6,47 +6,7 @@
 		padding: 40px 0 25px
 	.main-title
 		color: #fff
-	.project-item
-		&.mt-20
-			@media (min-width: 992px)
-				margin-top: 20px
-		&.main
-			margin: 0
-			@media (min-width: 992px)
-				margin-right: 30px
-				figcaption
-					// width: 250px
-					width: 40%
-			.box-img
-				height: 600px
-				@media (max-width: 992px)
-					height: 500px
-				@media (max-width: 768px)
-					height: 400px
-				@media (max-width: 576px)
-					height: 290px
-		&:hover
-			.box-img
-				box-shadow: 0 0 0 5px #00A650
-			p, h3
-				color: #fff
-			img
-				transform: scale3d(1.1, 1.1, 1.1)
-			figcaption
-				background: #00A650
-		@media (max-width: 992px)
-			margin-top: 30px
-		@media (max-width: 576px)
-			margin-top: 15px
-	.box-img
-		overflow: hidden
-		height: 290px
-		transition: all .2s ease-in-out
-		img
-			width: 100%
-			height: 100%
-			object-fit: cover
-			transition: all .2s ease-in-out
+		margin: 0
 	.view-all
 		display: block
 		line-height: 1
@@ -66,6 +26,45 @@
 		&:after
 			margin-left: 10px
 			+mtrl('\f054')
+.home-project-item
+	margin-top: 30px
+	@media (max-width: 576px)
+		margin-top: 15px
+	&.mt-20
+		@media (min-width: 992px)
+			margin-top: 20px
+	&.main
+		@media (min-width: 992px)
+			figcaption
+				width: 40%
+		.box-img
+			height: 600px
+			@media (max-width: 992px)
+				height: 500px
+			@media (max-width: 768px)
+				height: 400px
+			@media (max-width: 576px)
+				height: 290px
+	&:hover
+		.box-img
+			border: 5px solid #00A650
+		p, h3
+			color: #fff
+		img
+			transform: scale3d(1.1, 1.1, 1.1)
+		figcaption
+			background: #00A650
+	.box-img
+		overflow: hidden
+		height: 290px
+		border: 0 solid #00A650
+		box-shadow: 0 0 5px rgba(0,0,0,.2)
+		transition: all .2s ease-in-out
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: all .2s ease-in-out
 	figure
 		position: relative
 	figcaption

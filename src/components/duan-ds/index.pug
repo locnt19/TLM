@@ -1,0 +1,53 @@
+section.duan-ds
+	.container
+		.row
+			h2.main-title dự án
+		.row
+			.col-lg-8
+				.home-project-item.main
+					a(href="#")
+						figure
+							.box-img
+								img(src='./img/home/home-project.jpg', alt='./img/home/home-project.jpg')
+							figcaption
+								p dự án đang triển khai
+								h3 PRINCESS VILLAS
+			.col-lg-4
+				.home-project-item
+					a(href="#")
+						figure
+							.box-img
+								img(src='./img/home/home-project.jpg', alt='./img/home/home-project.jpg')
+							figcaption
+								p dự án đang triển khai
+								h3 PRINCESS VILLAS
+				.home-project-item.mt-20
+					a(href="#")
+						figure
+							.box-img
+								img(src='./img/home/home-project.jpg', alt='./img/home/home-project.jpg')
+							figcaption
+								p dự án đang triển khai
+								h3 PRINCESS VILLAS
+			-for(i=0; i <3; i++)
+				.col-lg-4
+					.home-project-item
+						a(href="#")
+							figure
+								.box-img
+									img(src='./img/home/home-project.jpg', alt='./img/home/home-project.jpg')
+								figcaption
+									p dự án đang triển khai
+									h3 PRINCESS VILLAS
+			.col-lg-12
+				.pages.newspager
+					.modulepager
+						ul.pagination
+							li.PagerCurrentPageCell.active
+								span.SelectedPage(title='Navigate to Page 1') 1
+							li.PagerOtherPageCells
+								a.ModulePager(href='#', title='Navigate to Page 2') 2
+							li.PagerOtherPageCells
+								a.ModulePager.NextPage(href='#', title='Next to Page 2') ›
+							li.PagerOtherPageCells
+								a.ModulePager.LastPage(href='#', title='Navigate to Last Page') »
