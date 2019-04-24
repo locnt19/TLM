@@ -1,0 +1,50 @@
+section.duanct-thuvien-tintuc
+	.container
+		.row
+			.col-12
+				.thu-vien
+					h2.main-title thư viện ảnh
+					.row.no-gutters
+						.col-lg-6
+							.home-gallery-item.main
+								figure
+									.box-img
+										a(href="./img/home/home-gallery-1.jpg" data-fancybox="gallery")
+											img(src='./img/home/home-gallery-1.jpg', alt='1').lazyload.blur-up
+									.d-none
+										a(href="./img/home/home-project.jpg" data-fancybox="gallery")
+											img(src='./img/home/home-project.jpg', alt='1').lazyload.blur-up
+										a(href="./img/home/home-project.jpg" data-fancybox="gallery")
+											img(src='./img/home/home-project.jpg', alt='1').lazyload.blur-up
+						.col-lg-6.d-flex.flex-wrap.justify-content-md-between
+							-for(i=0; i<4; i++)
+								.home-gallery-item
+									figure
+										.box-img
+											a(href="./img/home/home-news.jpg" data-fancybox="gallery-1")
+												img(src='./img/home/home-gallery-1.jpg', alt='1').lazyload.blur-up
+										.d-none
+											a(href="./img/home/home-news.jpg" data-fancybox="gallery-1")
+												img(src='./img/home/home-news.jpg', alt='1').lazyload.blur-up
+											a(href="./img/home/home-news.jpg" data-fancybox="gallery-1")
+												img(src='./img/home/home-news.jpg', alt='1').lazyload.blur-up
+			.col-12
+				.tin-tuc
+					h2.main-title tin tức
+					.gioithieu-swiper
+						.swiper-container
+							.swiper-wrapper
+								-for(i=0; i < 5; i++)
+									.swiper-slide
+										.home-news-item
+											figure
+												.box-img
+													a(href="#")
+														img(src='./img/home/home-news.jpg', alt='./img/home/home-news.jpg')
+												figcaption
+													h3
+														a(href="#") King Bay nhận giải thưởng quốc tế “khu đô thị sinh thái ven sông xuất sắc 2018”
+													time 29/03/2019
+						.navigation
+							.btn-prev
+							.btn-next

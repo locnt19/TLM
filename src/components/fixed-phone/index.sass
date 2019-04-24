@@ -12,7 +12,7 @@
 	@media (max-width: 576px)
 		transform: scale(0.6)
 		bottom: 4%
-		right: -20px
+		// right: -20px
 	.phone-icon
 		border-radius: 50%
 		width: 70px
@@ -45,14 +45,16 @@
 			animation: circle-animation 3s infinite
 	.phone-number
 		opacity: 0
-		background: #eb0000
+		// background: #eb0000
+		background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
 		padding: 5px 14px
-		margin-left: 0
-		margin-right: 21px
+		white-space: nowrap
 		border-radius: 5px
-		position: relative
+		position: absolute
+		right: 90px
 		transition: 0.3s all
 		text-decoration: none
+		box-shadow: 0 0 5px rgba(0,0,0,.2)
 		&:before
 			position: absolute
 			content: ''
@@ -62,14 +64,15 @@
 			transform:  translateY(-50%) rotate(45deg)
 			width: 7px
 			height: 7px
-			background: #eb0000
+			// background: #eb0000
+			background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
 		span
+			display: block
 			text-transform:  uppercase
 			font-weight: 700
 			color: #fff
 		&.show
 			opacity: 1
-			transition: 0.3s all
 
 @keyframes circle-animation
 	0% 

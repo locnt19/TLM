@@ -60,7 +60,7 @@ $(document).ready(function () {
 				'padding-top': headerOuterHeight + 'px'
 			})
 		},
-	}
+	};
 
 	const Home = {
 		banner: function () {
@@ -82,15 +82,156 @@ $(document).ready(function () {
 				loop: true,
 				autoplay: {
 					delay: 2000
-			},
+				},
 				speed: 2500,
 				pagination: {
 					el: '.swiper-pagination',
 				},
 			});
 		}
-	}
+	};
+
+	const GioiThieu = {
+		slideDoiTac: function () {
+			let slideDoiTac = new Swiper('.gioithieu-doitac .swiper-container', {
+				slidesPerView: 5,
+				spaceBetween: 60,
+				loop: true,
+				autoplay: {
+					delay: 2500
+				},
+				speed: 2000,
+				breakpoints: {
+					1200: {
+						spaceBetween: 50
+					},
+					992: {
+						slidesPerView: 4,
+						spaceBetween: 40
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 30
+					},
+					576: {
+						slidesPerView: 2,
+						spaceBetween: 20
+					},
+					340: {
+						slidesPerView: 1,
+						spaceBetween: 10
+					}
+				},
+				navigation: {
+					nextEl: '.gioithieu-doitac .btn-next',
+					prevEl: '.gioithieu-doitac .btn-prev'
+				}
+			});
+		},
+		slideLichSu: function () {
+			let slideLichSuTop = new Swiper('.gioithieu-lichsu .top-swiper', {
+				slidesPerView: 6,
+				freeMode: true,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+				speed: 2000,
+				breakpoints: {
+					992: {
+						slidesPerView: 5,
+					},
+					768: {
+						slidesPerView: 4,
+					},
+					576: {
+						slidesPerView: 3,
+					}
+				},
+			});
+			let slideLichSuBottom = new Swiper('.gioithieu-lichsu .bottom-swiper', {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				slideToClickedSlide: true,
+				speed: 2000,
+				thumbs: {
+					swiper: slideLichSuTop
+				}
+			});
+		},
+		slideGiaiThuong: function () {
+			let slideGiaiThuong = new Swiper('.gioithieu-giaithuong .swiper-container', {
+				slidesPerView: 4,
+				spaceBetween: 30,
+				loop: true,
+				autoplay: {
+					delay: 2500
+				},
+				speed: 2000,
+				breakpoints: {
+					992: {
+						slidesPerView: 3
+					},
+					768: {
+						slidesPerView: 2
+					},
+					576: {
+						slidesPerView: 1
+					}
+				},
+				navigation: {
+					nextEl: '.gioithieu-giaithuong .btn-next',
+					prevEl: '.gioithieu-giaithuong .btn-prev'
+				}
+			});
+		},
+	};
 	
+	const DuAnChiTiet = {
+		slideTienIch: function () {
+			let slideTienIch = new Swiper('.duanct-tienich .swiper-container', {
+				slidesPerView: 1,
+				loop: true,
+				autoplay: {
+					delay: 2500
+				},
+				speed: 2000,
+				navigation: {
+					nextEl: '.duanct-tienich .btn-next',
+					prevEl: '.duanct-tienich .btn-prev'
+				}
+			});
+		},
+		slideTinTuc: function () {
+			let slideTinTuc = new Swiper('.duanct-thuvien-tintuc .tin-tuc .swiper-container', {
+				slidesPerView: 4,
+				loop: true,
+				autoplay: {
+					delay: 2500
+				},
+				speed: 2000,
+				breakpoints: {
+					1200: {
+						slidesPerView: 3
+					},
+					992: {
+						slidesPerView: 2
+					},
+					768: {
+						slidesPerView: 1
+					},
+				},
+				navigation: {
+					nextEl: '.duanct-thuvien-tintuc .tin-tuc .btn-next',
+					prevEl: '.duanct-thuvien-tintuc .tin-tuc .btn-prev'
+				}
+			});
+		},
+	}
+
+	$('.fixed-phone .phone-icon').click(function () {
+		$('.fixed-phone .phone-number').toggleClass('show')
+	});
+
 	Header.toggleMainMenu();
 	Header.toggleLanguage();
 	Header.moveLanguageOnMobile();
@@ -100,9 +241,9 @@ $(document).ready(function () {
 	Header.fixedPositon();
 	Home.banner();
 	Home.gallerySlide();
-
-	$('.fixed-phone .phone-icon').click(function () {
-		$('.fixed-phone .phone-number').toggleClass('show')
-	})
-	
+	GioiThieu.slideDoiTac();
+	GioiThieu.slideLichSu();
+	GioiThieu.slideGiaiThuong();
+	DuAnChiTiet.slideTienIch();
+	DuAnChiTiet.slideTinTuc();
 });

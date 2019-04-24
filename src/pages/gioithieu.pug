@@ -1,0 +1,13 @@
+extends _layout.pug
+
+block var
+	- var title = 'gioithieu'
+	- var bodyClass = 'gioithieu-page'
+
+block main
+	include ../components/gioithieu/banner/index
+	include ../components/breadcrumb/index
+	include ../components/gioithieu/gioithieu/index
+	include ../components/gioithieu/lichsu/index
+	include ../components/gioithieu/lanhdao/index
+	include ../components/gioithieu/doitac-chienluoc/index

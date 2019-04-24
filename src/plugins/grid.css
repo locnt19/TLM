@@ -350,6 +350,18 @@ template {
 	flex-wrap: wrap !important;
 }
 
+.align-items-center {
+	-webkit-box-align: center !important;
+	-ms-flex-align: center !important;
+	align-items: center !important;
+}
+
+.justify-content-center {
+	-webkit-box-pack: center !important;
+	-ms-flex-pack: center !important;
+	justify-content: center !important;
+}
+
 @media (max-width: 992px) {
 	.justify-content-md-between {
 		-webkit-box-pack: justify !important;

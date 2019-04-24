@@ -1,0 +1,75 @@
+.gioithieu-lichsu
+	padding: 60px 0
+	background: url('../img/gioithieu/bg-lichsu.jpg') center center
+	background-size: cover
+	.col-lg-10
+		margin: 0 auto
+	.main-title
+		color: #fff
+		width: 100%
+	.swiper-wrapper
+		width: 100%
+	.top-swiper
+		width: 100%
+		padding: 15px
+		margin-bottom: 30px
+		p
+			line-height: 1
+			padding-bottom: 20px
+			text-align: center
+			font-size: 24px
+			color: #fff
+			position: relative
+			transition: all .2s ease-in-out
+			pointer-events: none
+			&:after
+				content: ''
+				width: 10px
+				height: 10px
+				background: #fff
+				position: absolute
+				bottom: -6.5px
+				left: 50%
+				transform: translateX(-50%)
+				transition: all .2s ease-in-out
+		.swiper-slide-thumb-active
+			p
+				color: #00A650
+				&:after
+					background: #00A650
+					box-shadow: 0 0 0 3px rgba(245, 130, 31,.3)
+		.line
+			width: 100%
+			height: 1px
+			background: #fff
+	figure
+		display: flex
+		flex-flow: wrap
+		width: 100%
+		.box-img,
+		figcaption
+			flex: 0 0 50%
+			max-width: 50%
+			@media (max-width: 768px)
+				flex: 0 0 100%
+				max-width: 100%
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		figcaption
+			padding: 30px
+			padding-top: 15px
+			color: #fff
+			background: rgba(14, 30, 65, 0.2)
+			time
+				line-height: 1
+				font-size: 72px
+				color: #00A650
+				font-weight: 700
+				@media (max-width: 992px)
+					font-size: 60px
+				@media (max-width: 768px)
+					font-size: 48px
+				@media (max-width: 576px)
+					font-size: 36px

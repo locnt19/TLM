@@ -1,0 +1,40 @@
+.gioithieu-navigation
+	.col-auto
+		margin: 0 auto
+	.navigation
+		line-height: 1
+		box-shadow: 0 1px 0 #ebebeb
+		@media (max-width: 992px)
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+		a
+			position: relative
+			display: inline-block
+			text-transform: uppercase
+			color: #004892
+			font-weight: 600
+			padding: 15px 0
+			margin: 0 25px
+			text-align: center
+			transition: all .2s ease-in-out
+			@media (min-width: 992px)
+				&:first-child
+					margin-left: 0
+				&:last-child
+					margin-right: 0
+			&:after
+				content: ''
+				transition: all .2s ease-in-out
+			&.active,
+			&:hover
+				color: #00A650
+				&:after
+					content: ''
+					display: block
+					width: 100%
+					height: 3px
+					background: #004892
+					position: absolute
+					bottom: -2px

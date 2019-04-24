@@ -1,0 +1,16 @@
+extends _layout.pug
+
+block var
+	- var title = 'duan-ct'
+	- var bodyClass = 'duan-ct-page'
+
+block main
+	include ../components/gioithieu/banner/index
+	include ../components/breadcrumb/index
+	include ../components/duan-ct/gioithieu/index
+	include ../components/duan-ct/vitri/index
+	include ../components/duan-ct/matbang/index
+	include ../components/duan-ct/tienich/index
+	include ../components/duan-ct/banhang/index
+	include ../components/duan-ct/thuvien-tintuc/index
+	include ../components/duan-ct/lienhe/index
