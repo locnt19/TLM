@@ -1,0 +1,28 @@
+.video
+	padding: 60px 0 70px
+	@media (max-width: 768px)
+		padding: 40px 0 50px
+	.main-title
+		width: 100%
+		color: #004892
+	.home-news-nav
+		margin-bottom: 0
+	.hinh-anh-item
+		.box-img
+			height: 230px
+			overflow: hidden
+		figure
+			&:after
+				content: ''
+				z-index: 1
+				width: 39px
+				height: 39px
+				background: url('../img/play-btn-trans.png')
+				background-size: cover
+		&.main
+			.box-img
+				height: 490px
+			figure
+				&:after
+					width: 70px
+					height: 70px

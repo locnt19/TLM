@@ -1,0 +1,33 @@
+section.hinh-anh
+	.container
+		.row
+			h2.main-title thư viện
+			.col-12.d-flex.justify-content-center
+				.home-news-nav
+					a(href="#") video
+					a(href="#").active hình ảnh
+			-for(i=0; i<9; i++)
+				.col-sm-6.col-lg-4
+					.hinh-anh-item
+						figure
+							.box-img
+								a(href="./img/home/home-gallery-1.jpg" data-fancybox="gallery")
+									img(src='./img/home/home-gallery-1.jpg', alt='1').lazyload.blur-up
+							.d-none
+								a(href="./img/home/home-project.jpg" data-fancybox="gallery")
+									img(src='./img/home/home-project.jpg', alt='1').lazyload.blur-up
+								a(href="./img/home/home-project.jpg" data-fancybox="gallery")
+									img(src='./img/home/home-project.jpg', alt='1').lazyload.blur-up
+							figcaption KingBay nhận giải thưởng Khu đô thị sinh thái
+			.col-12
+				.pages.newspager
+					.modulepager
+						ul.pagination
+							li.PagerCurrentPageCell.active
+								span.SelectedPage(title='Navigate to Page 1') 1
+							li.PagerOtherPageCells
+								a.ModulePager(href='#', title='Navigate to Page 2') 2
+							li.PagerOtherPageCells
+								a.ModulePager.NextPage(href='#', title='Next to Page 2') ›
+							li.PagerOtherPageCells
+								a.ModulePager.LastPage(href='#', title='Navigate to Last Page') »
