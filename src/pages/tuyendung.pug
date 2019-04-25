@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'tuyendung'
+	- var bodyClass = 'tuyendung-page'
+
+block main
+	include ../components/gioithieu/banner/index
+	include ../components/breadcrumb/index
+	include ../components/tuyendung/tuyendung/index
+	include ../components/tuyendung/chinh-sach/index
+	include ../components/tuyendung/nghe-nghiep/index

@@ -92,6 +92,36 @@ $(document).ready(function () {
 	};
 
 	const GioiThieu = {
+		slideLichSu: function () {
+			let slideLichSuTop = new Swiper('.gioithieu-lichsu .top-swiper', {
+				slidesPerView: 6,
+				freeMode: true,
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+				slideToClickedSlide: true,
+				speed: 2000,
+				breakpoints: {
+					992: {
+						slidesPerView: 5,
+					},
+					768: {
+						slidesPerView: 4,
+					},
+					576: {
+						slidesPerView: 3,
+					}
+				},
+			});
+			let slideLichSuBottom = new Swiper('.gioithieu-lichsu .bottom-swiper', {
+				slidesPerView: 1,
+				spaceBetween: 15,
+				slideToClickedSlide: true,
+				speed: 2000,
+				thumbs: {
+					swiper: slideLichSuTop
+				}
+			});
+		},
 		slideDoiTac: function () {
 			let slideDoiTac = new Swiper('.gioithieu-doitac .swiper-container', {
 				slidesPerView: 5,
@@ -128,45 +158,15 @@ $(document).ready(function () {
 				}
 			});
 		},
-		slideLichSu: function () {
-			let slideLichSuTop = new Swiper('.gioithieu-lichsu .top-swiper', {
-				slidesPerView: 6,
-				freeMode: true,
-				watchSlidesVisibility: true,
-				watchSlidesProgress: true,
-				slideToClickedSlide: true,
-				speed: 2000,
-				breakpoints: {
-					992: {
-						slidesPerView: 5,
-					},
-					768: {
-						slidesPerView: 4,
-					},
-					576: {
-						slidesPerView: 3,
-					}
-				},
-			});
-			let slideLichSuBottom = new Swiper('.gioithieu-lichsu .bottom-swiper', {
-				slidesPerView: 1,
-				spaceBetween: 15,
-				slideToClickedSlide: true,
-				speed: 2000,
-				thumbs: {
-					swiper: slideLichSuTop
-				}
-			});
-		},
 		slideGiaiThuong: function () {
 			let slideGiaiThuong = new Swiper('.gioithieu-giaithuong .swiper-container', {
 				slidesPerView: 4,
 				spaceBetween: 30,
 				loop: true,
 				autoplay: {
-					delay: 2500
+					delay: 3000
 				},
-				speed: 2000,
+				speed: 2500,
 				breakpoints: {
 					992: {
 						slidesPerView: 3
@@ -185,7 +185,7 @@ $(document).ready(function () {
 			});
 		},
 	};
-	
+
 	const DuAnChiTiet = {
 		slideTienIch: function () {
 			let slideTienIch = new Swiper('.duanct-tienich .swiper-container', {
@@ -241,8 +241,8 @@ $(document).ready(function () {
 	Header.fixedPositon();
 	Home.banner();
 	Home.gallerySlide();
-	GioiThieu.slideDoiTac();
 	GioiThieu.slideLichSu();
+	GioiThieu.slideDoiTac();
 	GioiThieu.slideGiaiThuong();
 	DuAnChiTiet.slideTienIch();
 	DuAnChiTiet.slideTinTuc();

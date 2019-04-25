@@ -1,0 +1,31 @@
+section.hoatdong-xahoi
+	.container
+		.row
+			h2.main-title truyền thông
+			.col-12.d-flex.justify-content-center
+				.home-news-nav
+					a(href="#").active Hoạt động từ thiện
+					a(href="#") Trách nhiệm cộng đồng
+			-for(i=0; i<6; i++)
+				.col-sm-6.col-lg-4.home-news-item
+					figure
+						.box-img
+							a(href="#")
+								img(src='./img/home/home-news.jpg', alt='./img/home/home-news.jpg')
+						figcaption
+							h3
+								a(href="#") King Bay nhận giải thưởng quốc tế “khu đô thị sinh thái ven sông xuất sắc 2018”
+							time 29/03/2019
+							p King Bay nhận giải thưởng quốc tế “khu đô thị sinh thái ven sông xuất sắc 2018” King Bay nhận giải thưởng quốc tế “khu đô thị sinh thái ven sông xuất sắc 2018” King Bay nhận giải thưởng quốc tế “khu đô thị sinh thái ven sông xuất sắc 2018”
+			.col-12
+				.pages.newspager
+					.modulepager
+						ul.pagination
+							li.PagerCurrentPageCell.active
+								span.SelectedPage(title='Navigate to Page 1') 1
+							li.PagerOtherPageCells
+								a.ModulePager(href='#', title='Navigate to Page 2') 2
+							li.PagerOtherPageCells
+								a.ModulePager.NextPage(href='#', title='Next to Page 2') ›
+							li.PagerOtherPageCells
+								a.ModulePager.LastPage(href='#', title='Navigate to Last Page') »
