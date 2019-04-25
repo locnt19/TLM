@@ -1,0 +1,105 @@
+.tuyendung-ct
+	padding: 60px 0 70px
+	@media (max-width: 768px)
+		padding: 40px 0 50px
+	.main-title,
+	.other-title
+		color: #004892
+		font-size: 24px
+		font-weight: 600
+		text-align: left
+		margin-bottom: 20px
+		@media (max-width: 768px)
+			font-size: 20px
+			margin-bottom: 15px
+		@media (max-width: 576px)
+			font-size: 16px
+	hr
+		border-color: #e0e0e0
+	h3
+		text-transform: uppercase
+		font-size: 18px
+		font-weight: 600
+		margin-bottom: 10px
+	time
+		display: block
+		color: #999
+	a
+		line-height: 1
+		color: #333
+	strong
+		font-weight: 600
+	li
+		position: relative
+		margin-bottom: 10px
+		padding-left: 20px
+		@media (max-width: 768px)
+			padding-left: 15px
+		&:before
+			position: absolute
+			top: 5px
+			left: 0
+			color: #999
+			content: '\f9dd'
+			display: inline-block
+			font-size: inherit
+			line-height: 1
+			text-rendering: auto
+			font-family: 'Material Design Icons'
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			@media (max-width: 768px)
+				top: 3px
+	input
+		background: #004892
+		color: #fff
+		line-height: 1
+		border-radius: 3px
+		border: none
+		text-transform: uppercase
+		padding: 15px 61px
+		margin-top: 15px
+		@media (max-width: 576px)
+			padding: 12px 50px
+		&:hover
+			background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
+	.mdi
+		font-weight: 600
+	.table
+		margin: 20px 0
+		overflow-x: auto
+		&::-webkit-scrollbar
+			height: 6px
+		&::-webkit-scrollbar-track
+			background: #E5E5E5
+		&::-webkit-scrollbar-thumb
+			border-radius: 99px
+			background: rgb(0, 72, 146,.3)
+		&::-webkit-scrollbar-thumb:hover
+			background: #004892
+		table
+			width: 100%
+			td
+				white-space: nowrap
+				padding: 5px 30px 5px 0
+				&:before
+					color: #999
+					margin-right: 10px
+	.other-title
+		text-transform: uppercase
+		color: #fff
+		line-height: 1
+		padding: 18px 30px
+		background: #004892
+		margin-bottom: 0
+		@media (max-width: 992px)
+			margin-top: 30px
+	.other-wrapper
+		padding: 0 30px
+		background: #f5f5f5
+		@media (max-width: 992px)
+			padding: 0 15px
+	.other-item
+		padding: 15px
+		&:not(:last-child)
+			border-bottom: 1px solid #e1e1e1
