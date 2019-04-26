@@ -1,31 +1,12 @@
 .duanct-gioithieu
 	background: url('../img/duan-ct/bg-1.jpg') center center fixed
 	background-size: cover
-	padding: 0 0 90px
+	padding: 100px 0 90px
 	color: #fff
 	@media (min-width: 992px)
 		font-size: 15px
 	@media (max-width: 768px)
-		padding-bottom: 60px
-	.gioithieu-navigation
-		margin-bottom: 60px
-		@media (max-width: 768px)
-			margin-bottom: 30px
-		.navigation
-			box-shadow: 0 1px 0 rgba(255,255,255,.2)
-		a
-			color: #fff
-			&.active,
-			&:hover
-				color: #00A650
-				&:after
-					content: ''
-					display: block
-					width: 100%
-					height: 3px
-					background: #fff
-					position: absolute
-					bottom: -2px
+		padding: 70px 0 60px
 	.main-title
 		text-align: left
 	li
@@ -69,3 +50,23 @@
 				@media (max-width: 576px)
 					width: 30px
 					height: 30px
+.duan-ct-page
+	.gioithieu-navigation
+		.navigation
+			box-shadow: 0 1px 0 rgba(255,255,255,.2)
+			@media (min-width: 992px)
+				a
+					font-weight: 400
+					color: #fff
+					&.active,
+					&:hover
+						font-weight: 600
+						color: #00A650
+						&:after
+							content: ''
+							display: block
+							width: 100%
+							height: 3px
+							background: #fff
+							position: absolute
+							bottom: -2px

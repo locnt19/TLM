@@ -184,6 +184,28 @@ $(document).ready(function () {
 				}
 			});
 		},
+		dropdownNavigation: function () {
+			$('.gioithieu-navigation .dropdown-btn').on('click', function () {
+				$(this).siblings('.navigation').slideToggle()
+			})
+			$(window).on('resize', function () {
+				if ($(window).width() > 992) {
+					$('.gioithieu-navigation .navigation').removeAttr('style')
+				}
+			})
+		},
+		scrollEventNavigation: function () {
+			$('.gioithieu-navigation a').each(function () {
+				$(this).on('click', function (e) {
+					e.preventDefault()
+					const target = $(this).attr('href');
+					const position = $(target).offset().top - $('header').outerHeight();
+					$('html, body').animate({
+						scrollTop: position
+					}, 1500)
+				})
+			})
+		}
 	};
 
 	const DuAnChiTiet = {
@@ -226,6 +248,18 @@ $(document).ready(function () {
 				}
 			});
 		},
+		tabsTienIch: function () {
+			let tabs = $(".tienich-wrapper .tienich-tabs span")
+			tabs.each(function () {
+				$(this).on('click', function () {
+					tabs.removeClass('active') // remove all class active of tab
+					$(this).addClass('active') // add class of current tab
+					const target = $(this).attr('tabs') // attribute of current tab
+					$('.tienich-content').hide()
+					$('.tienich-content[tabs="' + target + '"]').fadeIn()
+				});
+			});
+		},
 	}
 
 	$('.fixed-phone .phone-icon').click(function () {
@@ -239,11 +273,18 @@ $(document).ready(function () {
 	Header.moveNavigationOnMobile();
 	Header.moveSearchBoxOnMobile();
 	Header.fixedPositon();
+
 	Home.banner();
 	Home.gallerySlide();
+	
 	GioiThieu.slideLichSu();
 	GioiThieu.slideDoiTac();
 	GioiThieu.slideGiaiThuong();
+	GioiThieu.dropdownNavigation();
+	GioiThieu.scrollEventNavigation();
+	
 	DuAnChiTiet.slideTienIch();
 	DuAnChiTiet.slideTinTuc();
+	DuAnChiTiet.tabsTienIch();
+
 });

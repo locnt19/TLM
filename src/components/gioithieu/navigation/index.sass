@@ -1,22 +1,51 @@
 .gioithieu-navigation
-	.col-auto
-		margin: 0 auto
-	.navigation
-		line-height: 1
-		box-shadow: 0 1px 0 #ebebeb
+	// position: sticky
+	position: relative
+	.col-12
+		display: flex
+		justify-content: center
 		@media (max-width: 992px)
-			width: 100%
-			display: flex
-			flex-wrap: wrap
-			justify-content: center
+			position: static
+	.navigaiton-wrapper
+		z-index: 10
+		// position: sticky
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		padding: 0 15px
+		@media (max-width: 992px)
+			padding: 0
+			.navigation
+				display: none
+	.dropdown-btn
+		width: 100%
+		color: #fff
+		text-transform: uppercase
+		padding: 15px
+		background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
+		@media (min-width: 992px)
+			display: none
+		i
+			float: right
+	.navigation
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		box-shadow: 0 1px 0 #ebebeb
+		line-height: 1
+		top: 50px
+		@media (max-width: 992px)
+			display: block
+			background: #fff
 		a
+			display: block
 			position: relative
-			display: inline-block
 			text-transform: uppercase
 			color: #004892
-			font-weight: 600
 			padding: 15px 0
 			margin: 0 25px
+			font-weight: 600
 			text-align: center
 			transition: all .2s ease-in-out
 			@media (min-width: 992px)
