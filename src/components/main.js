@@ -21,7 +21,7 @@ $(document).ready(function () {
 				mobileMethod: 'appendTo',
 				desktopWrapper: 'header .language-wrapper',
 				desktopMethod: 'appendTo',
-				breakpoint: 1410,
+				breakpoint: 1200,
 			}).watch()
 		},
 		moveNavigationOnMobile: function () {
@@ -31,7 +31,7 @@ $(document).ready(function () {
 				mobileMethod: 'appendTo',
 				desktopWrapper: 'header .main-header-nav',
 				desktopMethod: 'appendTo',
-				breakpoint: 1410,
+				breakpoint: 1200,
 			}).watch()
 		},
 		movePhoneOnMobile: function () {
@@ -41,7 +41,7 @@ $(document).ready(function () {
 				mobileMethod: 'appendTo',
 				desktopWrapper: 'header .phone-wrapper',
 				desktopMethod: 'appendTo',
-				breakpoint: 1410,
+				breakpoint: 1200,
 			}).watch()
 		},
 		moveSearchBoxOnMobile: function () {
@@ -51,7 +51,7 @@ $(document).ready(function () {
 				mobileMethod: 'appendTo',
 				desktopWrapper: 'header .search-wrapper',
 				desktopMethod: 'appendTo',
-				breakpoint: 1410,
+				breakpoint: 1200,
 			}).watch()
 		},
 		fixedPositon: function () {
@@ -272,8 +272,7 @@ $(document).ready(function () {
 	Header.movePhoneOnMobile();
 	Header.moveNavigationOnMobile();
 	Header.moveSearchBoxOnMobile();
-	Header.fixedPositon();
-
+	
 	Home.banner();
 	Home.gallerySlide();
 	
@@ -286,5 +285,6 @@ $(document).ready(function () {
 	DuAnChiTiet.slideTienIch();
 	DuAnChiTiet.slideTinTuc();
 	DuAnChiTiet.tabsTienIch();
-
+	
+	Header.fixedPositon();
 });

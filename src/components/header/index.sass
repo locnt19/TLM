@@ -52,7 +52,7 @@ header
 			position: absolute
 			top: 0
 			right: 100%
-		@media (max-width: 1410px)
+		@media (max-width: 1200px)
 			&:before, &:after
 				content: none
 	.search-box
@@ -63,7 +63,7 @@ header
 		input
 			padding: 6.5px 10px
 			color: #fff
-			@media (min-width: 1410px)
+			@media (min-width: 1200px)
 				font-size: 15px
 			&::placeholder
 				font-style: italic
@@ -136,6 +136,13 @@ header
 	/* ========== main-header style ========== */
 	.main-header
 		background: #fff
+		@media (min-width: 1200px) and (max-width: 1410px)
+			height: 80px
+		@media (max-width: 1200px)
+			.col-lg-2
+				flex: 0 0 100%
+				max-width: 100%
+
 	.main-header-logo
 		position: relative
 		margin-top: -20px
@@ -150,11 +157,32 @@ header
 			font-weight: 600
 			text-transform: uppercase
 			color: #333
+			@media (min-width: 1200px) and (max-width: 1410px)
+				font-size: 14px
 		>li
 			position: relative
-			padding: 20.5px 25px
+			padding: 20.5px
+			@media (min-width: 1200px) and (max-width: 1410px)
+				padding: 28px 20px
+			&:first-child
+				a
+					font-size: 0
+					&:before
+						content: '\f2dc'
+						display: inline-block
+						font-family: 'Material Design Icons'
+						font-size: 16px
+						text-rendering: auto
+						line-height: 1
+						-webkit-font-smoothing: antialiased
+						-moz-osx-font-smoothing: grayscale
+						@media (max-width: 1200px)
+							color: #fff
 			&:last-child
-				padding-right: 0
+				@media (min-width: 1200px) and (max-width: 1410px)
+					padding-right: 15px
+				@media (min-width: 1430px)
+					padding-right: 0
 				.sub-nav
 					left: auto
 					right: 0
@@ -162,7 +190,7 @@ header
 				.sub-nav
 					opacity: 1
 					visibility: visible
-					@media (max-width: 1410px)
+					@media (max-width: 1200px)
 						position: static
 		.sub-nav
 			position: absolute
@@ -174,10 +202,6 @@ header
 			opacity: 0
 			visibility: hidden
 			transition: all .5s ease-in-out
-			@media (min-width: 1410px)
-				background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
-				a
-					color: #fff
 			li
 				display: block
 				padding: 7.5px 20px
@@ -213,7 +237,7 @@ header
 		transform: rotate(0deg)
 		transition: .5s ease-in-out
 		cursor: pointer
-		@media (min-width: 1410px)
+		@media (min-width: 1200px)
 			display: none
 		span
 			background-image: linear-gradient(to right top, #00a650, #009580, #0080a2, #0066a9, #004892)
